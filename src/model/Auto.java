@@ -9,7 +9,19 @@ public class Auto {
     public double price;
     public char segment;
 
-    // ALT + INS
+    public Auto(String brand, String model, int year, String color, String fuel_type, double price, char segment){
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+        this.color = color;
+        this.fuel_type = fuel_type;
+        this.price = price;
+        this.segment = segment;
+
+    };
+
+
+
 
 
     @Override
@@ -23,5 +35,16 @@ public class Auto {
                 ", price=" + price +
                 ", segment=" + segment +
                 '}';
+    }
+
+    public void setPrice (double price){
+        this.price = price;
+    }
+
+    public double getPrice (){
+        return this.price;
+    }
+    public double getPriceWithTax (int tax){
+        return this.price * (1+ (tax/100.));
     }
 }
